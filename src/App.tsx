@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Outlet, Navigate, useNavigate, useLocatio
 import AppShell from "./formic/components/AppShell";
 import Select from "./formic/components/Select";
 import { iconFor } from "./formic/components/primitives";
-import CustomizeNudge from "./CustomizeNudge";
 
 // Pages
 import Login from "./pages/auth/Login";
@@ -374,7 +373,7 @@ export default function App() {
     <ToastProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/" element={<Navigate to="/student" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/onboarding" element={<Onboarding />} />
@@ -432,7 +431,6 @@ export default function App() {
             <Route path="approvals" element={<AdminApprovals />} />
           </Route>
         </Routes>
-        <CustomizeNudge />
       </BrowserRouter>
     </ToastProvider>
   );

@@ -17,7 +17,7 @@ export default function Register() {
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate auth success and go to onboarding
-    navigate("/onboarding");
+    navigate("/student");
   };
 
   return (

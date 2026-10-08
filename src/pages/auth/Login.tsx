@@ -4,13 +4,14 @@
    Action: Enter credentials and log in.
    Register: Text
 */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AppShell from "../../formic/components/AppShell";
 import Button from "../../formic/components/Button";
 import Input from "../../formic/components/Input";
 import { Card, Checkbox } from "../../formic/components/primitives";
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <AppShell rail="none" padding={false}>
       <div className="flex min-h-dvh items-center justify-center bg-canvas-subtle p-6">
@@ -37,7 +38,7 @@ export default function Login() {
             </Link>
           </div>
 
-          <Button variant="accent" className="w-full mt-2">
+          <Button variant="accent" className="w-full mt-2" onClick={(e) => { e.preventDefault(); navigate("/student"); }}>
             Sign In
           </Button>
         </form>
