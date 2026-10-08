@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {
+    "@formic": "https://formicai.dev/r/{name}.json",
+    "@formic-pro": {
+      "url": "https://formicai.dev/r/pro/{name}.json",
+      "headers": {
+        "Authorization": "Bearer ${FORMIC_KEY}",
+        "X-Formic-Activation": "${FORMIC_KEY_ACTIVATION}"
+      }
+    }
+  }
+}
