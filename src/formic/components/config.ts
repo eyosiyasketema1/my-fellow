@@ -28,8 +28,8 @@ export type FormicConfig = {
 };
 
 export const FORMIC_CONFIG: FormicConfig = {
-  avatar: "initials",
-  sidebar: "full",
+  avatar: "photo",
+  sidebar: "topbar",
   sidebarState: "expanded",
   motion: true,
 };
